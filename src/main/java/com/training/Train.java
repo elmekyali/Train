@@ -10,16 +10,17 @@ import java.util.*;
 
 public class Train {
 
-    List<Compartment> compartments ;
-    Parser parser       = new DefaultParser();
-    Presenter presenter = new DefaultPresenter();
+    private List<Compartment> compartments;
+    private Presenter presenter;
 
     public Train(String train) {
-        compartments = parser.trainParser(train);
+        Parser parser = new DefaultParser();
+        this.compartments = parser.trainParser(train);
+        this.presenter = new DefaultPresenter();
     }
 
     public String print() {
-        return presenter.trainPresenter(compartments , "::");
+        return presenter.trainPresenter(compartments, "::");
     }
 
     public boolean fill() {

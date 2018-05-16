@@ -1,6 +1,6 @@
 package com.training.entities;
 
-public class Cargo extends Compartment {
+public class Cargo implements Compartment {
 
     private boolean isFilling = false;
 
@@ -11,6 +11,6 @@ public class Cargo extends Compartment {
 
     @Override
     public boolean fill() {
-       return !isFilling ? isFilling = true : false ;
+       return !isFilling && (isFilling = true);
     }
 }

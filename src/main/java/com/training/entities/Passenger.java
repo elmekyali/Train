@@ -1,6 +1,6 @@
 package com.training.entities;
 
-public class Passenger extends Compartment {
+public class Passenger implements Compartment {
 
     public String print() {
         return "|OOOO|";

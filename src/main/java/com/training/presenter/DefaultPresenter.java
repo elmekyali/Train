@@ -8,6 +8,6 @@ import java.util.stream.Collectors;
 public class DefaultPresenter implements Presenter {
     @Override
     public String trainPresenter(List<Compartment> compartments, String delimiter) {
-        return String.join(delimiter , compartments.stream().map(Compartment::print).collect(Collectors.toList()));
+        return compartments.stream().map(Compartment::print).collect(Collectors.joining(delimiter));
     }
 }

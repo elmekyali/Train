@@ -1,6 +1,6 @@
 package com.training.entities;
 
-public class Restaurant extends Compartment {
+public class Restaurant implements Compartment {
     @Override
     public String print() {
         return "|hThT|";
